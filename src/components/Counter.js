@@ -4,19 +4,23 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 //import { INCREMENT,DECREMENT } from '../redux/actions/types';
 import {incrementAction,decrementAction,incrementActionBy} from '../redux/actions/counterAction';
+import { decrement, increment, incrementByAmount } from '../redux/counterSlice';
 
 export default function Counter() {
 
     const count=useSelector(state=>state.counter.count);
     const dispatch=useDispatch();
     const handle_inc=()=>{
-        incrementAction(dispatch);//dispatch(incrementAction());
+        //incrementAction(dispatch);//dispatch(incrementAction());
+        dispatch(increment());
     }
     const handle_dec=()=>{
-        decrementAction(dispatch);
+        //decrementAction(dispatch);
+        dispatch(decrement());
     }
     const handle_inc_by=(vl)=>{
-        incrementActionBy(vl,dispatch);
+        //incrementActionBy(vl,dispatch);
+        dispatch(incrementByAmount(vl));
     }
   return (
     <div>
