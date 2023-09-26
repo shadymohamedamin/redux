@@ -1,0 +1,18 @@
+.sidebar{
+    width: 25%;
+    height: calc(100vh-61);
+    background-color: #f6f6f6;
+padding: 7px;
+}
+.sidebar ul{
+    list-style: none;
+}
+.sidebar li a{
+    display: block;
+background-color: #333;
+color: white;
+padding: 7px;
+margin-bottom: 10px;
+font-size: 18px;
+text-decoration: none;
+}
