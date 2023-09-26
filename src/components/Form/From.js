@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import './Form.css'
-import { addUser } from '../../redux/userSlice';
+import { addUser, addUser1 } from '../../redux/userSlice';
 import { useDispatch } from 'react-redux';
 import insertUser from '../../redux/api';
 export default function Form(){
@@ -9,7 +9,8 @@ export default function Form(){
     const dispatch=useDispatch();
     const submit=(e)=>{
         e.preventDefault();
-        insertUser({name,email},dispatch);
+        //insertUser({name,email},dispatch);
+        dispatch(addUser1({name,email}));
     }
   return (
     <form onSubmit={submit}>
